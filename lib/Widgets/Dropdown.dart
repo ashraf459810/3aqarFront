@@ -21,8 +21,13 @@ class _DropDownState extends State<DropDown> {
       isExpanded: true,
       underline: SizedBox(),
       hint: chosenvalue == null
-          ? Center(child: Text(widget.hint))
-          : Center(child: Text(chosenvalue)),
+          ? Center(
+              child: Text(
+              widget.hint,
+              style: TextStyle(color: Colors.black),
+            ))
+          : Center(
+              child: Text(chosenvalue, style: TextStyle(color: Colors.black))),
       items: widget.list.map((dynamic value) {
         return DropdownMenuItem<dynamic>(
             value: value,

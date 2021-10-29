@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.symmetric(vertical: 10),
                         child: Card(
                           child: container(
-                              hight: h(350),
+                              hight: h(370),
                               child: Center(
                                 child: Column(
                                   children: [
@@ -307,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                                   style: TextStyle(
                                       color: iscolored != index
                                           ? Colors.black87
-                                          : Colors.orangeAccent,
+                                          : Colors.blue[800],
                                       fontSize: 14),
                                 ),
                               ),

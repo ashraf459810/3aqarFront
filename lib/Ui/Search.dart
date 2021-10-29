@@ -73,7 +73,8 @@ class _SearchState extends State<Search> {
                         hight: h(50),
                         width: w(70),
                         color: Colors.white,
-                        bordercolor: isbuy ? Colors.blue : Colors.transparent,
+                        bordercolor:
+                            isbuy ? Colors.blue[800] : Colors.transparent,
                         borderRadius: 6,
                         child: text(text: "Buy")),
                   ),
@@ -103,13 +104,21 @@ class _SearchState extends State<Search> {
                     text: "  City",
                     fontsize: 18,
                   ),
-                  DropDown(
-                    list: ["Lattakia", "Tartus"],
-                    hint: "select city",
-                    onchanged: (val) {
-                      city = val;
-                    },
-                    getindex: (val) {},
+                  SizedBox(
+                    height: h(10),
+                  ),
+                  container(
+                    width: w(300),
+                    borderRadius: 10,
+                    color: Colors.grey[200],
+                    child: DropDown(
+                      list: ["Lattakia", "Tartus"],
+                      hint: "select city",
+                      onchanged: (val) {
+                        city = val;
+                      },
+                      getindex: (val) {},
+                    ),
                   ),
                 ],
               ),
@@ -124,17 +133,25 @@ class _SearchState extends State<Search> {
                     text: "  Neighbourhood",
                     fontsize: 18,
                   ),
-                  DropDown(
-                    list: [
-                      "Algamgouria street",
-                      "al zera3a",
-                      "almashro3 alsabe3"
-                    ],
-                    hint: "select hood",
-                    onchanged: (val) {
-                      hood = val;
-                    },
-                    getindex: (val) {},
+                  SizedBox(
+                    height: h(10),
+                  ),
+                  container(
+                    width: w(300),
+                    borderRadius: 10,
+                    color: Colors.grey[200],
+                    child: DropDown(
+                      list: [
+                        "Algamgouria street",
+                        "al zera3a",
+                        "almashro3 alsabe3"
+                      ],
+                      hint: "select hood",
+                      onchanged: (val) {
+                        hood = val;
+                      },
+                      getindex: (val) {},
+                    ),
                   ),
                 ],
               ),
@@ -149,22 +166,30 @@ class _SearchState extends State<Search> {
                     text: "  proberty type",
                     fontsize: 18,
                   ),
-                  DropDown(
-                    list: ["office", "house", "shop"],
-                    hint: "select proberty type",
-                    onchanged: (val) {
-                      if (val == "office" || val == "shop") {
-                        isshop = true;
-                        isoffice = true;
-                        probertyType = val;
-                      } else {
-                        isshop = false;
-                        isoffice = false;
-                        probertyType = val;
-                      }
-                      setState(() {});
-                    },
-                    getindex: (val) {},
+                  SizedBox(
+                    height: h(10),
+                  ),
+                  container(
+                    width: w(300),
+                    borderRadius: 10,
+                    color: Colors.grey[200],
+                    child: DropDown(
+                      list: ["office", "house", "shop"],
+                      hint: "select type",
+                      onchanged: (val) {
+                        if (val == "office" || val == "shop") {
+                          isshop = true;
+                          isoffice = true;
+                          probertyType = val;
+                        } else {
+                          isshop = false;
+                          isoffice = false;
+                          probertyType = val;
+                        }
+                        setState(() {});
+                      },
+                      getindex: (val) {},
+                    ),
                   ),
                 ],
               ),
@@ -272,19 +297,27 @@ class _SearchState extends State<Search> {
                     text: "  Furnishe",
                     fontsize: 18,
                   ),
-                  DropDown(
-                    list: [
-                      "totaly Furnished",
-                      "partly Furnishe ",
-                      "not Furnished   "
-                    ],
-                    hint: "select Furnishe type",
-                    onchanged: (val) {
-                      val == "office" ? isoffice = true : isoffice = false;
-                      furnishe = val;
-                      setState(() {});
-                    },
-                    getindex: (val) {},
+                  SizedBox(
+                    height: h(10),
+                  ),
+                  container(
+                    width: w(300),
+                    borderRadius: 10,
+                    color: Colors.grey[200],
+                    child: DropDown(
+                      list: [
+                        "totaly Furnished",
+                        "partly Furnishe ",
+                        "not Furnished   "
+                      ],
+                      hint: "select type",
+                      onchanged: (val) {
+                        val == "office" ? isoffice = true : isoffice = false;
+                        furnishe = val;
+                        setState(() {});
+                      },
+                      getindex: (val) {},
+                    ),
                   ),
                 ],
               ),
@@ -292,7 +325,7 @@ class _SearchState extends State<Search> {
                 height: h(40),
               ),
               container(
-                  color: Colors.blue[400],
+                  color: Colors.blue[800],
                   hight: h(60),
                   width: MediaQuery.of(context).size.width,
                   child: Center(
